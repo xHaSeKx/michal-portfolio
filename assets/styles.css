@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.experiences{
+    background: url(images/hi.jpg);
+}
+
+.wrapper{
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line{
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #000;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.wrapper .row{
+  display: flex;
+}
+.wrapper .row-1{
+  justify-content: flex-start;
+}
+.wrapper .row-2{
+  justify-content: flex-end;
+}
+.wrapper .row container{
+  background: #000;
+  border-radius: 10px;
+  border: 2px solid #ffef0a;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row container::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #000;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.row-1 container::before{
+  right: -7px;
+}
+.row-2 container::before{
+  left: -7px;
+}
+.row container .icon,
+.center-line .scroll-icon{
+  position: absolute;
+  background: #000;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffef0a;
+  box-shadow: 0 0 0 4px #ffef0a, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+}
+.center-line .scroll-icon{
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.row-1 container .icon{
+  top: 15px;
+  right: -60px;
+}
+.row-2 container .icon{
+  top: 15px;
+  left: -60px;
+}
+.row container .details,
+.row container .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row container .details .titles{
+  font-size: 22px;
+  font-weight: 600;
+}
+.row container p{
+  margin: 10px 0 17px 0;
+}
+
+.row container .bottom a:hover{
+  transform: scale(0.97);
+}
+@media(max-width: 790px){
+  .wrapper .center-line{
+    left: 40px;
+  }
+  .wrapper .row{
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row container{
+    width: 100%;
+  }
+  .row-1 container::before{
+    left: -7px;
+  }
+  .row-1 container .icon{
+    left: -60px;
+  }
+}
+@media(max-width: 440px){
+  .wrapper .center-line,
+  .row container::before,
+  .row container .icon{
+    display: none;
+  }
+  .wrapper .row{
+    margin: 10px 0;
+  }
+}
